@@ -3,7 +3,7 @@ import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
 import colors from "../config/colors";
 
-const BackGround = ({ children }) => {
+const BackGround2 = ({ children }) => {
   const [init, setInit] = useState(false);
 
   useEffect(() => {
@@ -20,14 +20,13 @@ const BackGround = ({ children }) => {
 
   const options = useMemo(
     () => ({
-      fullScreen: {
-        enable: false,
-        // zIndex: -1,
-      },
       background: {
         color: {
           value: colors.primary,
         },
+      },
+      fullScreen: {
+        enable: false,
       },
       fpsLimit: 120,
       interactivity: {
@@ -95,18 +94,17 @@ const BackGround = ({ children }) => {
 
   if (init) {
     return (
-      <div>
-        <Particles
-          id="tsparticles"
-          particlesLoaded={particlesLoaded}
-          options={options}
-        ></Particles>{" "}
+      <Particles
+        id="tsparticles2"
+        particlesLoaded={particlesLoaded}
+        options={options}
+      >
         {children}
-      </div>
+      </Particles>
     );
   }
 
   return <></>;
 };
 
-export default BackGround;
+export default BackGround2;
