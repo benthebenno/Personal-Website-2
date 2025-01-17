@@ -1,20 +1,14 @@
 import { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
+import colors from "../config/colors";
 
 const BackGround = () => {
   const [init, setInit] = useState(false);
 
-  // this should be run only once per application lifetime
   useEffect(() => {
     initParticlesEngine(async (engine) => {
-      // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
-      // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-      // starting from v2 you can add only the features you need reducing the bundle size
-      //await loadAll(engine);
-      //await loadFull(engine);
       await loadSlim(engine);
-      //await loadBasic(engine);
     }).then(() => {
       setInit(true);
     });
@@ -28,7 +22,7 @@ const BackGround = () => {
     () => ({
       background: {
         color: {
-          value: "#0d47a1",
+          value: colors.primary,
         },
       },
       fpsLimit: 120,
@@ -45,24 +39,24 @@ const BackGround = () => {
         },
         modes: {
           push: {
-            quantity: 4,
+            quantity: 1,
           },
           repulse: {
-            distance: 10,
+            distance: 200,
             duration: 0.4,
           },
         },
       },
       particles: {
         color: {
-          value: "#ffffff",
+          value: colors.third,
         },
         links: {
-          color: "#ffffff",
-          distance: 150,
+          color: colors.fifth,
+          distance: 200,
           enable: true,
-          opacity: 0.5,
-          width: 1,
+          opacity: 1,
+          width: 5,
         },
         move: {
           direction: "none",
@@ -78,16 +72,16 @@ const BackGround = () => {
           density: {
             enable: true,
           },
-          value: 80,
+          value: 0,
         },
         opacity: {
-          value: 0.5,
+          value: 1,
         },
         shape: {
           type: "circle",
         },
         size: {
-          value: { min: 1, max: 5 },
+          value: { min: 2, max: 5 },
         },
       },
       detectRetina: true,
