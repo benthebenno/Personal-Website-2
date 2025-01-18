@@ -4,22 +4,25 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import BackGround from "./components/InteractiveBackground";
 import BackGround2 from "./components/InteractiveBackground2";
+import colors from "./config/colors";
+import MaintTitle from "./components/MainTitle";
 function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <>
-      <view className="mainScreen">
+    <div className="container">
+      <div className="mainScreen">
         <BackGround>
-          <h1>gggggggggggggfffffffffffffffffffffffffffffffffffffffffffg</h1>
+          <MaintTitle></MaintTitle>
         </BackGround>
-      </view>
-      <view className="mainScreenSecondHalf">
-        <BackGround2>
-          <h1>gggggggggggggg</h1>
-        </BackGround2>
-      </view>
-    </>
+      </div>
+      <div className="mainScreenSecondHalf">
+        <BackGround2></BackGround2>
+      </div>
+      <div className="aboutMeScreen">
+        <h1>MEEE</h1>
+      </div>
+    </div>
   );
 }
 

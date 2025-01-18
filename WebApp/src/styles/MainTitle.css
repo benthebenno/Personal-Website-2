@@ -1,0 +1,20 @@
+
+.mainText{
+    margin-top: 10vh;
+    color: var(--fifth-color);
+    font-size: 5rem;
+    white-space: nowrap;
+    margin-left: 5vw;
+}
+
+.subText{ 
+    margin-left: 10vw;
+    color: var(--third-color);
+    font-size: 2rem;
+    white-space: nowrap;}
+
+.bottomText{ color: var(--fourth-color);
+    font-size: 1.5rem;
+    white-space: nowrap;
+    margin-left: 15vw;}
+    

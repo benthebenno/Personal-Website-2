@@ -1,6 +1,31 @@
+:root {
+  --primary-color: rgb(249, 229, 205);
+  --secondary-color: rgb(80, 54, 17);
+  --third-color: rgb(215, 99, 11);
+  --fourth-color: rgb(234, 169, 109);
+  --fifth-color: rgb(113, 113, 77);
+
+}
+
+body{
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.aboutMeScreen{
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--secondary-color);
+  overflow: auto;
+
+}
+.container{
+   height: 100vh; 
+
+}
 .mainScreen{
   height: 100vh;
   width: 50vw;
+ 
 }
 .mainScrenSecondHalf{
   height: 100vh;
@@ -12,13 +37,14 @@
   left: 0;
   z-index: -1;
   width: 51%;
-  height: 100%;
+  height: 100vh;
 }
 #tsparticles2 {
   position: absolute;
   top: 0;
   left: 50vw;
   width: 50%;
-  height: 100%;
+  height: 100vh;
   z-index: -1;
+  
 }
