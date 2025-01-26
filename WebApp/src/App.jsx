@@ -10,17 +10,22 @@ function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <div className="container">
-      <div className="mainScreen">
+    <div className="backGround">
+      <div className="container">
+        {/* <div className="mainScreen">
         <BackGround>
-          <MaintTitle></MaintTitle>
+          
         </BackGround>
       </div>
       <div className="mainScreenSecondHalf">
         <BackGround2></BackGround2>
-      </div>
-      <div className="aboutMeScreen">
-        <h1>MEEE</h1>
+      </div> */}
+        <div className="mainScreen">
+          <MaintTitle></MaintTitle>
+        </div>
+        <div className="aboutMeScreen">
+          <h1>MEEE</h1>
+        </div>
       </div>
     </div>
   );

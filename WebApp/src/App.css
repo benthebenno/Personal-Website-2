@@ -4,30 +4,37 @@
   --third-color: rgb(215, 99, 11);
   --fourth-color: rgb(234, 169, 109);
   --fifth-color: rgb(113, 113, 77);
-
 }
-
-body{
+.backGround {
+  background-color: aqua;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+body {
   overflow-x: hidden;
   overflow-y: scroll;
 }
-.aboutMeScreen{
-  height: 100vh;
-  width: 100vw;
+.aboutMeScreen {
   background-color: var(--secondary-color);
-  overflow: auto;
-
+  /* overflow: auto; */
 }
-.container{
-   height: 100vh; 
-
+.container {
+  /* display: flex; */
+  width: 900px;
+  /* height: 100vh; */
+  /* align-content: center; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  background-color: beige;
+  flex-direction: column;
+  /* background-color: aqua; */
 }
-.mainScreen{
-  height: 100vh;
-  width: 50vw;
- 
+.mainScreen {
+  height: 50%;
 }
-.mainScrenSecondHalf{
+.mainScrenSecondHalf {
   height: 100vh;
   width: 50vw;
 }
@@ -46,5 +53,11 @@ body{
   width: 50%;
   height: 100vh;
   z-index: -1;
-  
+}
+
+/* Test stuff */
+.topBox {
+  width: 100px;
+  height: 100px;
+  background-color: aquamarine;
 }
